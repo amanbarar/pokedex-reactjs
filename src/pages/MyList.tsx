@@ -1,4 +1,5 @@
 import React from 'react'
+import Wrapper from '../sections/Wrapper';
 
 function MyList() {
   return (
@@ -6,4 +7,4 @@ function MyList() {
   )
 }
 
-export default MyList
+export default Wrapper(MyList);

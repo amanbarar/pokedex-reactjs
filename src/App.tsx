@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "./sections/Navbar";
 import Footer from "./sections/Footer";
-import Wrapper from "./sections/Wrapper";
 import Background from "./components/Background";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./scss/index.scss";
@@ -25,7 +24,6 @@ function App() {
             <Route element={<Compare />} path="/compare" />
             <Route element={<Pokemon />} path="/pokemon/:id" />
           </Routes>
-          <Wrapper />
           <Footer />
         </div>
       </BrowserRouter>

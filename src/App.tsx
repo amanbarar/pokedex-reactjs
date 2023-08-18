@@ -18,11 +18,13 @@ function App() {
       <BrowserRouter>
         <div className="app">
           <Navbar />
-          <Route element={<Search />} path="/search" />
-          <Route element={<MyList />} path="/list" />
-          <Route element={<About />} path="/about" />
-          <Route element={<Compare />} path="/compare" />
-          <Route element={<Pokemon />} path="/pokemon/:id" />
+          <Routes>
+            <Route element={<Search />} path="/search" />
+            <Route element={<MyList />} path="/list" />
+            <Route element={<About />} path="/about" />
+            <Route element={<Compare />} path="/compare" />
+            <Route element={<Pokemon />} path="/pokemon/:id" />
+          </Routes>
           <Wrapper />
           <Footer />
         </div>

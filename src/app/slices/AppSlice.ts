@@ -1,3 +1,4 @@
+// login information, etc.
 import { createSlice } from "@reduxjs/toolkit";
 import { AppTypeInitialState } from "../../utils/Types";
 

@@ -1,5 +1,11 @@
 # Pokedex Reactjs
 
+Skills used: React, Typescript, Redux, SASS, Firebase
+
+- Created a fully functional Pokedex app which gives information about Pokemons.
+- Login authentication and storing user's list is done using Firebase at the backend.
+- The application was deployed using Netlify.
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.

@@ -16,7 +16,6 @@ function Search() {
       const randomPokemonsId = clonedPokemons
         .sort(() => Math.random() - Math.random())
         .slice(0, 20);
-        console.log(randomPokemonsId);
     }
   }, [allPokemon])
   return (

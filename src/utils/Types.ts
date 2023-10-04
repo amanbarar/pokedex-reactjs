@@ -13,5 +13,15 @@ export interface generatedPokemonType {
   name: string;
   id: number;
   image: string;
-  // types: 
+  types: pokemonTypeInterface[]
+}
+
+export interface pokemonTypeInterface {
+  [key:string] : {
+    image: string,
+    resistance: string[],
+    strength: string[],
+    weakness: string[],
+    vulnerable: string[],
+  }
 }

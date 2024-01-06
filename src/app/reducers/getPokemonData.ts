@@ -10,16 +10,20 @@ export const getPokemonData = createAsyncThunk("pokemon/randomPokemon", async (p
   try {
     const pokemonsData: generatedPokemonType[] = [];
     for await (const pokemon of pokemons) {
-      const {data}: {
+      const {
+        data
+      }: {
         data: {
           id: number;
           types: {type: generatedPokemonType}[];
         };
       } = await axios.get(pokemon.url);
-      const types = data.types.map(({type: {name}}: {type: {name: string}}) => {
+      const types = data.types.map(
+        ({ type: { name }}: { type: { name: string }}) => ({
+        // @ts-expect-error
         [name]: pokemonTypes[name]
       })
-
+      );
       // @ts-expect-error
       let image: string = images[data.id]
       if (!image) {
@@ -28,14 +32,17 @@ export const getPokemonData = createAsyncThunk("pokemon/randomPokemon", async (p
       }
       if (image) {
         pokemonsData.push({
-          name: [pokemon.name],
+          name: pokemon.name,
           id: data.id,
           image,
           types,
         })
       }
-      console.log({data});
+      else {
+        console.log("No image");
+      }
     }
+    console.log({ pokemonsData });
   } catch (err) {
 
   }
